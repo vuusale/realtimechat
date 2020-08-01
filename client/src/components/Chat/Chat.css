@@ -1,0 +1,27 @@
+.chatOuterContainer {
+  height: 100%;
+  width: 100%;
+  background-color: #4A1A52;
+}
+
+.chatInnerContainer {
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -60%);
+  width: 40%;
+  height: 50%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .chatInnerContainer {
+      width: 100%;
+      height: 100%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .chatInnerContainer {
+    width: 60%;
+  }
+}

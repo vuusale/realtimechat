@@ -1,0 +1,21 @@
+.messagesOuterContainer {
+  position: absolute;
+  left: 10vw;
+  top: 6vh;
+  width: 30vw;
+  height: 50vh;
+}
+
+.messagesInnerContainer {
+  height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #F0E8F1;
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .messagesOuterContainer {
+    left: 20vw;
+    width: 40vw;
+  }
+}

@@ -1,0 +1,42 @@
+@media (min-width: 480px) and (max-width: 1200px) {
+  .activeUsersContainer {
+    width: 20vw !important;
+  }
+}
+
+.activeUsersContainer {
+  width: 10vw;
+  height: 100%;
+  background-color: #D8C8DA;
+  color: #6b3074;
+  font-size: 1.3em;
+  border: 1px solid #D8C8DA;
+}
+
+.activeUsersName:hover {
+  cursor: pointer;
+  color: #E4852D;
+}
+
+.activeUsersIcon {
+  margin-right: 5px;
+  color: #E4852D;
+  transform: translate(0, 12%);
+}
+
+.resetReceiver {
+  color: #fff !important;
+  text-decoration: none;
+  background: #E4852D;
+  display: inline-block;
+  border: none;
+  text-transform: uppercase;
+}
+
+.resetReceiver:hover {
+  cursor: pointer;
+}
+
+.resetReceiver:focus {
+  outline: 0;
+}

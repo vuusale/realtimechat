@@ -1,0 +1,53 @@
+.messageBox {
+  border-radius: 20px;
+  padding: 3px 20px;
+  color: white;
+}
+
+.messageText {
+  width: 100%;
+  letter-spacing: 0;
+  float: left;
+  word-wrap: break-word;
+}
+
+.messageContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0 5%;
+  margin-top: 3px;
+}
+
+.chatSender {
+  display: flex;
+  align-items: center;
+  font-family: Helvetica;
+  color: #A375AA;
+  letter-spacing: 0.3px;
+  font-size: 0.7em;
+  padding: 0 5px;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.colorWhite {
+  color: #F0E8F1;
+}
+
+.colorDark {
+  color: #6b3074;
+}
+
+.backgroundSender {
+  background: #A375AA;
+}
+
+.backgroundReceiver {
+  background: #D8C8DA;
+}
