@@ -1,6 +1,9 @@
 # Real-time chat application
  
-This is a real time chat application built with Node.js and Socket.io. It contains one back end application deployed on Heroku and one front end application deployed on Netlify. [Check the website](https://borntochat.netlify.app) 
+This is a real time chat application built with Socket.io. It is composed of of one back end application deployed on Heroku and one front end application deployed on Netlify. [Check the website](https://borntochat.netlify.app)
+##### Note: Website might be down at certain times.
+
+![img](https://github.com/vuusale/realtimechat/blob/master/screenshot.PNG)
 
 #### Main technologies used:
 <ul>
@@ -10,7 +13,7 @@ This is a real time chat application built with Node.js and Socket.io. It contai
 </ul>
 
 ## Prerequisites
-It is needed to install node.js and node package manager for development purposes.
+It is needed to install Node.js and Node Package Manager (npm) for development purposes.
 
 ### Node
 - #### Node installation on Windows
@@ -20,7 +23,7 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 
 - #### Node installation on Ubuntu
 
-  You can install nodejs and npm easily with apt install, just run the following commands.
+  You can install Node.js and npm easily with apt install, just run the following commands:
 
       $ sudo apt install nodejs
       $ sudo apt install npm
@@ -58,9 +61,9 @@ If you need to update `npm`, you can make it using `npm`!
 ## Preview
 This application makes use of web sockets to establish full-duplex communication channels between clients. WebSocket protocol facilitates interaction between a client and a web server with less overhead compared to HTTP.
 
-Once a user enters a room, a socket is created and a unique SocketId is assigned to it. This socket lives until one side decides to terminate the connection. In order to communicate, sides emit different requests to socket listeners. 
+Once a user enters a room, a socket is created and a unique SocketId is assigned to it. It lives until one side decides to terminate the connection. In order to communicate, sides emit different requests to socket listeners. 
 
-In this project, users visiting the website can view current rooms and join one of them or create a new one. Data about current rooms are obtained through a get request to the back end. In this room, they can send messages to other users. In addition, users have an option to choose a particular user and send messages to it only. For this purpose, they can just click the username of that user in the active users list on the left pane. There also exists a button to reset the receivers to everybody.
+In this project, users visiting the website can view current rooms and join one of them or create a new one. Data about current rooms are obtained through a get request to the back end. In rooms, they can send messages to other users. In addition, users have an option to choose a particular recipient and send messages to it only. For this purpose, they can just click the username of that user in the active users list on the left pane. There also exists a button to reset the receivers to everybody.
 
 ### How it works
-Behind the scenes, back end application holds a simple data structure — an array to store details belonging to users. When a user enters a chatroom, `join` request is emitted and an object is pushed to the 'users' array. This object consists of socket id, user name and room name. Before, it examines whether a user with the same username exists in that specific room. If yes, it rejects the join request and sends an error message `Username has been taken`. Else, socket is successfully established. Thereupon, each message sent by a user emits `sendMessage` request to the server. In response, server triggers `message` listener on front end socket listener and sends necessary details (sender name, sent time) about the message. Finally, new message component is pushed to the react application and shown to the receivers. 
+Behind the scenes, back end application holds a simple data structure — an array to store details belonging to users. When a user enters a chatroom, `join` request is emitted and an object is pushed to the 'users' array. This object consists of socket id, user name and room name. Before, it is examined whether a user with the same username exists in that specific room. If yes, it rejects the join request and sends an error message `Username has been taken`. Else, socket is successfully established. Thereupon, each message sent by a user emits `sendMessage` request to the server. In response, server triggers `message` listener on front end socket listener and sends necessary information (sender name, sent time) about the message. Finally, new message component is pushed to the react application and shown to the proper receivers.
