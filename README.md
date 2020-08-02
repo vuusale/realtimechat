@@ -1,6 +1,8 @@
 # Real-time chat application
  
 This is a real time chat application built with Socket.io. It is composed of of one back end application deployed on Heroku and one front end application deployed on Netlify. [Check the website](https://borntochat.netlify.app)
+##### Note: Website might be down at certain times.
+
 ![img](https://github.com/vuusale/realtimechat/blob/master/screenshot.PNG)
 
 #### Main technologies used:
