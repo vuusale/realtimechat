@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { devBackendURL } from './constants';
+import { devBackendURL, backendURL } from './constants';
 
 const instance = axios.create({
-    baseURL: devBackendURL,
+    // baseURL: devBackendURL,
+    baseURL: backendURL,
     withCredentials: true
 });
 
